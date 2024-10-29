@@ -1,0 +1,17 @@
+.table-bordered {
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+.sw-table {
+  border: 1px solid inherit;
+  border-collapse: collapse;
+  &-head {
+    @extend .table-bordered;
+  }
+  &-row {
+    @extend .table-bordered;
+    &-column {
+      @extend .table-bordered;
+    }
+  }
+}

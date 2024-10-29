@@ -1,0 +1,47 @@
+@import url("../../style.scss");
+.sw-input-control {
+  margin: 10px 0;
+  @mixin placeholder($isfocused: false) {
+    @if $isfocused {
+      label {
+        position: absolute;
+        top: 0;
+      }
+    } @else {
+      label {
+        position: absolute;
+        top: 30px;
+      }
+    }
+  }
+
+  &:has(p.error) {
+    * {
+      @extend .error;
+    }
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    border-bottom: 1px solid;
+    border-color: inherit;
+    outline: none;
+  }
+  label {
+    font-weight: 100;
+  }
+
+  .focused {
+    @include placeholder(true);
+  }
+  .blurred {
+    @include placeholder(false);
+  }
+
+  .pass_icon {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}

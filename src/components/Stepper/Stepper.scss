@@ -1,0 +1,50 @@
+.sw-stepper {
+  .sw-step-header {
+    .step-line {
+      height: 2px;
+      position: relative;
+      top: 5px;
+      background: black;
+      border: 0;
+      width: 50px;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 15px;
+    .step {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-number {
+        font-weight: bold;
+        padding: 4px 10px;
+        border: 1px solid;
+        border-color: inherit;
+        border-radius: 50%;
+        width: min-content;
+      }
+      &-label {
+        font-weight: normal;
+      }
+    }
+
+    .completed {
+      .step-number {
+        background-color: lightgreen;
+      }
+      .step-label {
+        color: lightgreen;
+      }
+    }
+    .active {
+      .step-number {
+        background-color: blue;
+      }
+      .step-label {
+        color: blue;
+      }
+    }
+  }
+}

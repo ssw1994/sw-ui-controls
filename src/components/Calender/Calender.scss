@@ -1,0 +1,23 @@
+.sw-calender {
+  &-controls {
+    width: 100%;
+    &-control {
+      position: relative;
+      top: -7px;
+      width: max-content;
+    }
+  }
+  &-date,
+  &-day {
+    width: min(calc(100% / 7) - 7px, 100%);
+    border: 1px solid lightgray;
+    height: 50px;
+    gap: 0 !important;
+  }
+
+  .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

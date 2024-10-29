@@ -1,0 +1,14 @@
+.sw-tabs {
+  display: flex;
+  flex-direction: column;
+  .sw-tab-header {
+    display: flex;
+    flex-direction: row;
+
+    > button {
+      border-radius: 0px !important;
+    }
+  }
+  .sw-tab-contents {
+  }
+}
