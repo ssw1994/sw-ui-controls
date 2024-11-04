@@ -1,13 +1,8 @@
-import React, { forwardRef, memo, useEffect, useState } from "react";
+import React, { useState } from "react";
 import InputStyle from "./Input.module.css";
 import validator from "./useValidator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClose,
-  faBars,
-  faEyeSlash,
-  faEye,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 export const Input = (props) => {
   const { label, ...otherprops } = props;
   const errors = validator(otherprops);

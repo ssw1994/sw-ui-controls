@@ -17,7 +17,10 @@ export default function CardGuide() {
   const cardtemplate = (
     <Card style={{ height: "300px", width: "22%" }}>
       <CardMedia>
-        <img src="https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU" />
+        <img
+          src="https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU"
+          alt="6"
+        />
       </CardMedia>
       <CardHeader>Jammu Kashmir Tourism</CardHeader>
       <CardBody>

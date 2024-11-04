@@ -16,7 +16,6 @@ export default function useCaraousel(props) {
   const slides = useMemo(() => {
     const s = [];
     React.Children.forEach(props.children, (child, index) => {
-      const childProps = child.props;
       s.push(new Slide(index, child));
     });
     updateActiveSlide(
@@ -26,7 +25,7 @@ export default function useCaraousel(props) {
       )
     );
     return s;
-  }, [props]);
+  }, [props, activeSlide]);
 
   const nextSlide = () => {
     if (activeSlide.slideNumber === slides.length - 1) return;

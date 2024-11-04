@@ -26,11 +26,11 @@ export const Counter = forwardRef((props, ref) => {
 
   useEffect(() => {
     updateCounter(props?.value);
-  }, []);
+  }, [props?.value]);
 
   useEffect(() => {
     props?.onCountChange(counter);
-  }, [counter]);
+  }, [props, counter]);
 
   return (
     <div className="sw-counter flex-row center-items">

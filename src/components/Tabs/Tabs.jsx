@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useMemo, useState } from "react";
+import React, { forwardRef, useMemo, useState } from "react";
 import { Button } from "../Button/Button";
 import TabsStyle from "./Tabs.module.css";
 import { Card } from "../Card";
@@ -49,7 +49,7 @@ export const Tabs = forwardRef((props, ref) => {
   const steps = useMemo(() => {
     let s = [];
     React.Children.forEach(props.children, (child, index) => {
-      const { header, children } = child.props;
+      const { header } = child.props;
       s.push({
         ...child.props,
         active: !activeStep ? index === 0 : activeStep.header === header,

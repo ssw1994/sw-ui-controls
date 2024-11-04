@@ -8,11 +8,11 @@ export default function CaraouselGuide() {
       <Tabs>
         <Tab header="Result">
           <Caraousel>
-            <img src="https://picsum.photos/id/1/200/300"></img>
-            <img src="https://picsum.photos/seed/picsum/200/300"></img>
-            <img src="https://picsum.photos/200/300?grayscale" />
-            <img src="https://picsum.photos/200/300/?blur" />
-            <img src="https://picsum.photos/200/300.jpg" />
+            <img src="https://picsum.photos/id/1/200/300" alt="1"></img>
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="2"></img>
+            <img src="https://picsum.photos/200/300?grayscale" alt="3" />
+            <img src="https://picsum.photos/200/300/?blur" alt="4" />
+            <img src="https://picsum.photos/200/300.jpg" alt="5" />
           </Caraousel>
         </Tab>
         <Tab header="Code">

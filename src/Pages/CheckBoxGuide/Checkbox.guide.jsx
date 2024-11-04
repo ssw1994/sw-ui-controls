@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CheckBox } from "../../components/CheckBox/CheckBox";
 import { Tab, Tabs } from "../../components/Tabs";
 

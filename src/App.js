@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import HeadSideContentLayout from "./Pages/Layouts/HeadSideContentLayout/HeadSideContentLayout";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./style.css";
-import { useState } from "react";
 import InputGuide from "./Pages/InputGuide/Input.guide";
 import ButtonGuide from "./Pages/ButtonGuide/Button.guide";
 import CheckBoxGuide from "./Pages/CheckBoxGuide/Checkbox.guide";
@@ -88,7 +86,6 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  const [name, setName] = useState("sachin");
   return <RouterProvider router={router}></RouterProvider>;
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export function useSorting(props) {
   const { columnDefs } = props;
@@ -9,9 +9,6 @@ export function useSorting(props) {
       const columnSortConfig = columnDefs
         .filter((column) => column.sortable)
         .map((column) => {
-          const activeSortColumn = columns?.find(
-            (c) => column.field === c.field
-          );
           return {
             field: column.field,
             active: column?.sorted ?? false,
@@ -127,7 +124,7 @@ export function usePagination(props) {
       });
 
     return items;
-  }, [filters, activeSortColumn]);
+  }, [filters, activeSortColumn, props?.data]);
 
   const getPageConfig = () => {
     let tempData = filteredData ? filteredData : data;
@@ -183,7 +180,7 @@ export function usePagination(props) {
 
   useEffect(() => {
     updateCurrentPageDetails(getPageConfig());
-  }, [currentPage, filteredData]);
+  }, [currentPage, filteredData, getPageConfig]);
 
   return {
     ...pageDetails,

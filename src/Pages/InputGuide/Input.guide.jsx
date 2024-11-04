@@ -8,7 +8,7 @@ export default function InputGuide() {
   const ref = createRef();
   useEffect(() => {
     ref?.current?.focus();
-  }, []);
+  }, [ref]);
   const handleSubmit = (e) => {
     e?.preventDefault();
   };

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import moment from "moment";
 
 class CalenderDate {
@@ -28,7 +28,7 @@ export default function useCalender(props) {
         .set("month", month)
         .set("year", year)
         .startOf("month");
-      if (currentDate.weekday() != 0) {
+      if (currentDate.weekday() !== 0) {
         const weekdays = moment.weekdays();
         for (let i = 0; i < weekdays.length; i++) {
           if (i !== currentDate.weekday()) {
@@ -54,7 +54,7 @@ export default function useCalender(props) {
   }, []);
 
   const nextMonth = () => {
-    if (month == 11) {
+    if (month === 11) {
       updateMonth(0);
       nextYear();
       return;
@@ -83,7 +83,7 @@ export default function useCalender(props) {
       return moment()?.set("month", month)?.set("year", year)?.format("MMM");
     }
     return null;
-  }, [month]);
+  }, [month, year]);
 
   const gotoMonth = (month) => {
     updateMonth(month);

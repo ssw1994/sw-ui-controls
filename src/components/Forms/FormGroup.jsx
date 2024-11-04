@@ -17,7 +17,7 @@ export function FormButton(buttonProps) {
 
 export default function FormGroup(props) {
   const updatedProps = useFormGroup(props);
-  const { onSubmit, children, valid, formValue, formError } = updatedProps;
+  const { onSubmit, children, formValue, formError } = updatedProps;
   return (
     <FormContext.Provider value={updatedProps}>
       <form

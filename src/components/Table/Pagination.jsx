@@ -1,5 +1,4 @@
 import React, { forwardRef, useContext } from "react";
-import useTable from "./useTable";
 import { TableContext } from "./Table";
 import { Button } from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

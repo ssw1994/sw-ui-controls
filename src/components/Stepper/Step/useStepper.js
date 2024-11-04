@@ -70,7 +70,7 @@ export default function useStepper(props) {
       });
       updateSteps(s);
     }
-  }, [isDynamicStepper]);
+  }, [props, isDynamicStepper]);
 
   const nextStep = () => {
     const index = steps.find((step) => step.isActive);

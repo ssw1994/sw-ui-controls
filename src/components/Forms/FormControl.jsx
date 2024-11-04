@@ -19,7 +19,7 @@ export const FormControl = forwardRef((props, ref) => {
 
   useEffect(() => {
     updateForm(props, value);
-  }, [value]);
+  }, [props, value]);
 
   if (inputTypes.includes(type)) {
     return (

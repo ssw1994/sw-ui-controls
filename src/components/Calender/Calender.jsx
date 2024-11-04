@@ -16,7 +16,7 @@ const Day = ({ date }) => {
   const { dateTemplate, month, year } = useContext(CalenderContext);
   const isPreviosMonthDate = useMemo(() => {
     return moment(date).get("month") !== month;
-  }, [month, year]);
+  }, [month, year, date]);
 
   let cssClass = `${CalenderStyle.sw_calender_date} flex-row center-items`;
   cssClass = isPreviosMonthDate ? "disabled " + cssClass : cssClass;
@@ -47,7 +47,6 @@ const CalenderControls = () => {
   const {
     month,
     year,
-    monthString,
     prevMonth,
     nextMonth,
     nextYear,

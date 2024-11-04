@@ -40,7 +40,7 @@ export default function useFormGroup(props) {
       return true;
     });
     return isValid && !formError;
-  }, [form, props, formValue, formError]);
+  }, [form, formError]);
 
   const updateControlValidation = (value = "", props) => {
     return {
@@ -59,7 +59,7 @@ export default function useFormGroup(props) {
       }
     });
     updateForm({ ...formState });
-  }, []);
+  }, [props]);
 
   const updateFormValidation = (props, value) => {
     form[props.name] = updateControlValidation(value, props);
