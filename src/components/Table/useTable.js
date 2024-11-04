@@ -1,4 +1,4 @@
-import { act, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 export function useSorting(props) {
   const { columnDefs } = props;

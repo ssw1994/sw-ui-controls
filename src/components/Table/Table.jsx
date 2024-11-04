@@ -1,4 +1,9 @@
-import { createContext, forwardRef, useCallback, useContext } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  useCallback,
+  useContext,
+} from "react";
 import useTable from "./useTable";
 import TableStyle from "./Table.module.css";
 import { Pagination } from "./Pagination";

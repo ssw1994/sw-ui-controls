@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from "react";
+import React, { forwardRef, useContext } from "react";
 import useTable from "./useTable";
 import { TableContext } from "./Table";
 import { Button } from "../Button/Button";

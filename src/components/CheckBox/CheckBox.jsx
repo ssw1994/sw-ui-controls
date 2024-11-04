@@ -1,4 +1,4 @@
-import { forwardRef, useId } from "react";
+import React, { forwardRef, useId } from "react";
 import CheckBoxStyle from "./CheckBox.module.css";
 export const CheckBox = forwardRef((props, ref) => {
   const { label, ...otherprops } = props;

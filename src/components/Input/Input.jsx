@@ -1,4 +1,4 @@
-import { forwardRef, memo, useEffect, useState } from "react";
+import React, { forwardRef, memo, useEffect, useState } from "react";
 import InputStyle from "./Input.module.css";
 import validator from "./useValidator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

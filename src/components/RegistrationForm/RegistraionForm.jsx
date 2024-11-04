@@ -1,6 +1,7 @@
 import { Card } from "../Card";
 import { FormControl } from "../Forms/FormControl";
 import FormGroup, { FormButton } from "../Forms/FormGroup";
+import React from "react";
 export const RegistraionForm = ({ onRegister }) => {
   const confirmPassword = ({ password, repassword }) => {
     return password === repassword ? null : [true, "Password Mismatch"];

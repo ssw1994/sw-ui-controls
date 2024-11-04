@@ -1,6 +1,6 @@
 import { faAdd, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { forwardRef, useEffect, useMemo, useState } from "react";
+import React, { forwardRef, useEffect, useMemo, useState } from "react";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
 export const Counter = forwardRef((props, ref) => {

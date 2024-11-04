@@ -1,4 +1,4 @@
-import { createContext, forwardRef, useContext } from "react";
+import React, { forwardRef } from "react";
 import CardStyle from "./Card.module.css";
 export const Card = forwardRef((props, ref) => {
   return (
