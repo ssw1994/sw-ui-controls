@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import * as moment from "moment";
+import moment from "moment";
 
 class CalenderDate {
   date;

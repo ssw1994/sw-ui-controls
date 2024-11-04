@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import useValidator from "../../hooks/useValidator";
-import validator from "../../hooks/useValidator";
-
+import validator from "../Input/useValidator";
 export default function useFormGroup(props) {
   const [form, updateForm] = useState({});
   const { formvalidator } = props;
