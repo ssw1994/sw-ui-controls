@@ -1,6 +1,6 @@
 import { createContext, forwardRef, useCallback, useContext } from "react";
 import useTable from "./useTable";
-import "./Table.scss";
+import TableStyle from "./Table.module.css";
 import { Pagination } from "./Pagination";
 import { Input } from "../Input/Input";
 
@@ -11,7 +11,7 @@ const TableHead = (props) => {
   const { sortProps } = useContext(TableContext);
   const { updateSort, activeSortColumn } = sortProps;
   return (
-    <th className="sw-table-head" style={headerStyle}>
+    <th className={TableStyle.sw_table_head} style={headerStyle}>
       {header}
       {sortable && false && activeSortColumn?.field === field && (
         <i
@@ -48,7 +48,7 @@ const TableColumn = ({ item, column }) => {
   const dynamicStyle = column?.cellStyle?.(item) ?? {};
   return (
     <td
-      className="sw-table-row-column"
+      className={TableStyle.sw_table_row_column}
       style={{
         ...column.style,
         cursor: column?.cellClicked ? "pointer" : "auto",
@@ -76,7 +76,7 @@ const TableRows = (props) => {
   return pageData?.map((item, index) => {
     return (
       <tr
-        className="sw-table-row"
+        className={TableStyle.sw_table_row}
         style={{ ...rowStyle(item) }}
         onClick={() => rowClicked(item)}
         key={index}
@@ -125,7 +125,7 @@ export const Table = (props) => {
 
   return (
     <TableContext.Provider value={updatedProps}>
-      <table className="sw-table">
+      <table className={TableStyle.sw_table}>
         <thead>
           <TableHeader />
         </thead>

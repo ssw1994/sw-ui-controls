@@ -7,7 +7,7 @@ import {
   faChevronRight,
   faCircleDot,
 } from "@fortawesome/free-solid-svg-icons";
-import "./Caraousel.scss";
+import CaraouselStyle from "./Caraousel.module.css";
 export const Caraousel = forwardRef((props, ref) => {
   const updatedProps = useCaraousel(props);
   const {
@@ -20,14 +20,14 @@ export const Caraousel = forwardRef((props, ref) => {
     gotoSlide,
   } = updatedProps;
   return (
-    <div className="sw-caraousel flex-row center-items">
+    <div className={`${CaraouselStyle.sw_caraousel} flex-row center-items`}>
       <Button onClick={prevSlide} disabled={isFirstSlide}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Button>
       {slides.map((slide) => {
         return (
           <div
-            className="sw-slide"
+            className={CaraouselStyle.sw_slide}
             hidden={slide.slideNumber !== activeSlide?.slideNumber}
             key={slide.slideNumber}
           >
@@ -35,14 +35,14 @@ export const Caraousel = forwardRef((props, ref) => {
           </div>
         );
       })}
-      <div className="sw-caraousel-item">
+      <div className={CaraouselStyle.sw_caraousel_item}>
         {slides.map((slide) => {
           return (
             <Button
               onClick={() => gotoSlide(slide)}
               className={
                 slide.slideNumber !== activeSlide?.slideNumber
-                  ? "sw-carausel-item-active"
+                  ? CaraouselStyle.sw_carausel_item_active
                   : ""
               }
             >

@@ -19,7 +19,7 @@ export default function FormsGuide() {
 
       <Tabs>
         <Tab header="Result">
-          <FormGroup onSubmit={formSubmit} formValidator={[matchPassword]}>
+          <FormGroup onSubmit={formSubmit} formvalidator={[matchPassword]}>
             <FormControl
               type="text"
               label="Username"

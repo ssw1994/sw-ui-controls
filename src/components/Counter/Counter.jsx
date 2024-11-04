@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { forwardRef, useEffect, useMemo, useState } from "react";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
-import "../styles.scss";
 export const Counter = forwardRef((props, ref) => {
   const [counter, updateCounter] = useState("");
   const { min, max } = props;

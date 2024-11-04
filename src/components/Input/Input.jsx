@@ -1,5 +1,5 @@
 import { forwardRef, memo, useEffect, useState } from "react";
-import "./Input.scss";
+import InputStyle from "./Input.module.css";
 import validator from "../../hooks/useValidator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,7 +16,11 @@ export const Input = (props) => {
   const [showPassword, togglePassword] = useState(false);
 
   return (
-    <div className={`sw-input-control ${error ? error + "_error error" : ""}`}>
+    <div
+      className={`${InputStyle.sw_input_control} ${
+        error ? error + "_error error" : ""
+      }`}
+    >
       <label>{label}</label>
       <div style={{ position: "relative" }}>
         {otherprops?.type !== "password" && <input {...otherprops} />}
@@ -30,13 +34,13 @@ export const Input = (props) => {
           (showPassword ? (
             <FontAwesomeIcon
               icon={faEyeSlash}
-              className="pass_icon"
+              className={InputStyle.pass_icon}
               onClick={() => togglePassword(!showPassword)}
             />
           ) : (
             <FontAwesomeIcon
               icon={faEye}
-              className="pass_icon"
+              className={InputStyle.pass_icon}
               onClick={() => togglePassword(!showPassword)}
             />
           ))}

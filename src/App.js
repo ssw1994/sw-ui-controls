@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import HeadSideContentLayout from "./Pages/Layouts/HeadSideContentLayout/HeadSideContentLayout";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import "./style.scss";
+import "./style.css";
 import { useState } from "react";
 import InputGuide from "./Pages/InputGuide/Input.guide";
 import ButtonGuide from "./Pages/ButtonGuide/Button.guide";

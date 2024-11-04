@@ -1,0 +1,30 @@
+.sw_card {
+  height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.sw_card_header {
+  height: 10%;
+  font-weight: bold;
+}
+.sw_card_footer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.sw_card_body {
+  height: 20%;
+  overflow: hidden;
+}
+.sw_card_media {
+  height: 60%;
+  width: 100%;
+}
+.sw_card_media img {
+  height: 100%;
+  width: 100%;
+}
+.sw_card > :not(.sw_card-media) {
+  padding: 0 5px;
+}

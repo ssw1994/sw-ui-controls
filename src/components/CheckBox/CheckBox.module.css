@@ -1,0 +1,10 @@
+.sw_checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.sw_checkbox input {
+  width: 20px;
+  height: 20px;
+}

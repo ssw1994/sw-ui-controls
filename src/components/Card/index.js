@@ -1,7 +1,3 @@
-import { Card } from "./Card";
-import CardBody from "./CardBody";
-import CardFooter from "./CardFooter";
-import CardHeader from "./CardHeader";
-import CardMedia from "./CardMedia";
+import { Card, CardBody, CardHeader, CardFooter, CardMedia } from "./Card";
 
 export { Card, CardBody, CardMedia, CardHeader, CardFooter };

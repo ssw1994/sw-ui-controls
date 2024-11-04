@@ -1,0 +1,23 @@
+ .sw_caraousel .sw_slide {
+	 width: 75%;
+	 text-align: center;
+}
+ .sw_caraousel .sw_caraousel_item {
+	 position: absolute;
+	 display: flex;
+	 bottom: 5px;
+}
+ .sw_caraousel .sw_caraousel_item_active > button {
+	 fill: lightgreen;
+}
+ .sw_caraousel .sw_caraousel_item > button {
+	 width: max-content;
+	 padding: 0;
+	 margin: 0;
+	 height: fit-content;
+	 border: 0;
+}
+ .sw_caraousel .sw_caraousel_item > button > svg > path {
+	 fill: bisque;
+}
+ 

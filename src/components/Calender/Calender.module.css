@@ -1,0 +1,20 @@
+.sw_calender_controls {
+  width: 100%;
+}
+.sw_calender_controls_control {
+  position: relative;
+  top: -7px;
+  width: max-content;
+}
+.sw_calender_date,
+.sw_calender_day {
+  width: min(calc(100% / 7) - 7px, 100%);
+  border: 1px solid lightgray;
+  height: 50px;
+  gap: 0 !important;
+}
+.sw_calender .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

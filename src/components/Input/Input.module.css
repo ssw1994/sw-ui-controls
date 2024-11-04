@@ -1,0 +1,35 @@
+.error,
+.sw_input_control:has(p.error) * {
+  color: var(--error-color-dark);
+}
+.error *,
+.sw_input_control:has(p.error) * * {
+  color: var(--error-color-dark);
+}
+.sw_input_control {
+  margin: 10px 0;
+}
+.sw_input_control input {
+  width: 100%;
+  height: 30px;
+  border: 0px;
+  border-bottom: 1px solid;
+  border-color: inherit;
+  outline: none;
+}
+.sw_input_control label {
+  font-weight: 100;
+}
+.sw_input_control .focused label {
+  position: absolute;
+  top: 0;
+}
+.sw_input_control .blurred label {
+  position: absolute;
+  top: 30px;
+}
+.sw_input_control .pass_icon {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}

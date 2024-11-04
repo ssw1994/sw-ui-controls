@@ -1,0 +1,12 @@
+ .sw_tabs {
+	 display: flex;
+	 flex-direction: column;
+}
+ .sw_tabs .sw_tab_header {
+	 display: flex;
+	 flex-direction: row;
+}
+ .sw_tabs .sw_tab_header > button {
+	 border-radius: 0px !important;
+}
+ 

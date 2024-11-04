@@ -1,5 +1,5 @@
 import React, { createContext, forwardRef, useContext } from "react";
-import "./Stepper.scss";
+import StepperStyle from "./Stepper.module.css";
 import { Button } from "../Button/Button";
 import useStepper from "./Step/useStepper";
 export const StepperContext = createContext();
@@ -9,26 +9,26 @@ export const Step = (props) => {
 
   const { hasError, stepNumber, isDisabled, isActive, isCompleted, stepLabel } =
     props;
-  let cssClass = "step ";
+  let cssClass = StepperStyle.step + " ";
   if (hasError) {
-    cssClass += " error";
+    cssClass += StepperStyle.error;
   }
   if (isDisabled) {
-    cssClass += " disabled";
+    cssClass += StepperStyle.disabled;
   }
 
   if (isCompleted) {
-    cssClass += " completed";
+    cssClass += StepperStyle.completed;
   }
 
   if (isActive) {
-    cssClass += " active";
+    cssClass += StepperStyle.active;
   }
 
   return (
     <div className={cssClass} onClick={() => markAsActiveStep(props)}>
-      <div className="step-number">{stepNumber}</div>
-      <div className="step-label">{stepLabel}</div>
+      <div className={StepperStyle.step_number}>{stepNumber}</div>
+      <div className={StepperStyle.step_label}>{stepLabel}</div>
     </div>
   );
 };
@@ -45,11 +45,13 @@ export const StepHeader = (props) => {
   const { steps } = useContext(StepperContext);
 
   return (
-    <div className="sw-step-header">
+    <div className={StepperStyle.sw_step_header}>
       {steps?.map((step, index) => (
         <>
           <Step {...step} key={step.stepLabel} />
-          {index !== steps.length - 1 && <hr className="step-line" />}
+          {index !== steps.length - 1 && (
+            <hr className={StepperStyle.step_line} />
+          )}
         </>
       ))}
     </div>
@@ -59,7 +61,7 @@ export const StepHeader = (props) => {
 export const Steps = (props) => {
   const { steps, activeStep, preserve } = useContext(StepperContext);
   return (
-    <div className="sw-stepper">
+    <div className={StepperStyle.sw_stepper}>
       <StepHeader steps={steps}></StepHeader>
       {preserve &&
         steps.map(({ element, isActive }) => {
@@ -75,7 +77,7 @@ export const Stepper = (props) => {
 
   return (
     <StepperContext.Provider value={updatedProps}>
-      <div className="sw-stepper">
+      <div className={StepperStyle.sw_stepper}>
         <Steps />
       </div>
     </StepperContext.Provider>

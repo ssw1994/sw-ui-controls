@@ -1,11 +1,11 @@
 import React, { forwardRef, useEffect, useMemo, useState } from "react";
 import { Button } from "../Button/Button";
-import "./Tabs.scss";
+import TabsStyle from "./Tabs.module.css";
 import { Card } from "../Card";
 export const TabHeader = (props) => {
   const { steps, setActiveStep } = props;
   return (
-    <div className="sw-tab-header">
+    <div className={TabsStyle.sw_tab_header}>
       {steps.map((step) => {
         return (
           <Button
@@ -25,7 +25,7 @@ export const TabHeader = (props) => {
 export const TabContents = (props) => {
   const { steps } = props;
   return (
-    <div className="sw-tab-contents">
+    <div className={TabsStyle.sw_tab_contents}>
       {steps.map((step) => {
         return (
           <Card
@@ -62,7 +62,7 @@ export const Tabs = forwardRef((props, ref) => {
     setActiveStep(step);
   };
   return (
-    <div className="sw-tabs">
+    <div className={TabsStyle.sw_tabs} id="tabs">
       <TabHeader steps={steps} setActiveStep={updateActiveStep} />
       <TabContents steps={steps} />
     </div>

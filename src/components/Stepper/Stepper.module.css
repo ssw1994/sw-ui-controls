@@ -1,0 +1,43 @@
+.sw_stepper .sw_step_header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 15px;
+}
+.sw_stepper .sw_step_header .step_line {
+  height: 2px;
+  position: relative;
+  top: 5px;
+  background: black;
+  border: 0;
+  width: 50px;
+}
+.sw_stepper .sw_step_header .step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sw_stepper .sw_step_header .step_number {
+  font-weight: bold;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: 50%;
+  width: min-content;
+}
+.sw_stepper .sw_step_header .step_label {
+  font-weight: normal;
+}
+.sw_stepper .sw_step_header .completed .step_number {
+  background-color: lightgreen;
+}
+.sw_stepper .sw_step_header .completed .step_label {
+  color: lightgreen;
+}
+.sw_stepper .sw_step_header .active .step_number {
+  background-color: blue;
+}
+.sw_stepper .sw_step_header .active .step_label {
+  color: blue;
+}

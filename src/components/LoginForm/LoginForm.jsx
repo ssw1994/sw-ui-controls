@@ -1,10 +1,9 @@
 import { Card } from "../Card";
 import { FormControl } from "../Forms/FormControl";
 import FormGroup, { FormButton } from "../Forms/FormGroup";
-import "./LoginForm.scss";
 export const LoginForm = ({ onLogin }) => {
   return (
-    <Card className="sw-login-form">
+    <Card className="sw_login_form">
       <FormGroup onSubmit={onLogin} noValidate>
         <FormControl
           type="text"

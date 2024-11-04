@@ -1,7 +1,7 @@
 import { createContext, forwardRef, useContext, useMemo } from "react";
 import useCalender from "./useCalender";
 import moment from "moment";
-import "./Calender.scss";
+import CalenderStyle from "./Calender.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleRight,
@@ -18,7 +18,7 @@ const Day = ({ date }) => {
     return moment(date).get("month") !== month;
   }, [month, year]);
 
-  let cssClass = "sw-calender-date flex-row center-items";
+  let cssClass = `${CalenderStyle.sw_calender_date} flex-row center-items`;
   cssClass = isPreviosMonthDate ? "disabled " + cssClass : cssClass;
 
   if (dateTemplate && typeof dateTemplate === "function") {
@@ -36,7 +36,7 @@ const CalenderHeader = () => {
   const days = moment.weekdays();
   return days.map((day) => {
     return (
-      <div className="sw-calender-day flex-row center-items">
+      <div className={`${CalenderStyle.sw_calender_day} flex-row center-items`}>
         {day.substring(0, 3)}
       </div>
     );
@@ -69,14 +69,16 @@ const CalenderControls = () => {
   }, [year]);
 
   return (
-    <div className="sw-calender-controls flex-row center-items">
+    <div
+      className={`${CalenderStyle.sw_calender_controls} flex-row center-items`}
+    >
       <Button onClick={prevYear}>
         <FontAwesomeIcon icon={faAnglesLeft} />
       </Button>
       <Button onClick={prevMonth}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Button>
-      <div className="sw-calender-controls-control">
+      <div className={CalenderStyle.sw_calender_controls_control}>
         <select
           placeholder="Month"
           value={month}
@@ -91,7 +93,7 @@ const CalenderControls = () => {
           })}
         </select>
       </div>
-      <div className="sw-calender-controls-control">
+      <div className={CalenderStyle.sw_calender_controls_control}>
         <select
           placeholder="Year"
           value={year}
@@ -121,7 +123,7 @@ export const Calender = forwardRef((props, ref) => {
   const { dates } = updatedProps;
   return (
     <CalenderContext.Provider value={updatedProps}>
-      <div className="sw-calender flex-row">
+      <div className={`${CalenderStyle.sw_calender} flex-row`}>
         <CalenderControls />
         <CalenderHeader />
         {dates.map((date) => (
