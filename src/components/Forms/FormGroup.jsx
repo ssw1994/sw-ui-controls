@@ -7,11 +7,13 @@ export function FormButton(buttonProps) {
   const { onSubmit, valid, formValue } = useContext(FormContext);
 
   return (
-    <GlobalButton
-      {...buttonProps}
-      disabled={!valid}
-      onClick={() => onSubmit(formValue)}
-    />
+    <div className="flex-row center-items">
+      <GlobalButton
+        {...buttonProps}
+        disabled={!valid}
+        onClick={() => onSubmit(formValue)}
+      />
+    </div>
   );
 }
 

@@ -81,6 +81,10 @@ const CONTROLS = [
     id: "sw_counter",
     url: "Counter",
   },
+  {
+    id: "sw_rating",
+    url: "StarRating",
+  },
 ];
 
 export default function SideBar() {

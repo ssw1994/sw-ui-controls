@@ -16,6 +16,8 @@ import CalenderGuide from "./Pages/CalenderGuide/CalenderGuide";
 import LoginFormGuide from "./Pages/LoginFormGuide/LoginForm.guide";
 import RegisterFormGuide from "./Pages/RegisterFormGuide/RegisterForm.guide";
 import CounterGuide from "./Pages/CounterGuide/CounterGuide";
+import StarRatingGuide from "./Pages/StarRatingGuide/StarRatingGuide";
+import ExpansionPanelGuide from "./Pages/ExpansionPanelGuide/ExpansionPanelGuide";
 const router = createHashRouter([
   {
     path: "/",
@@ -76,6 +78,14 @@ const router = createHashRouter([
       {
         path: "Counter",
         element: <CounterGuide />,
+      },
+      {
+        path: "StarRating",
+        element: <StarRatingGuide />,
+      },
+      {
+        path: "ExpansionPanel",
+        element: <ExpansionPanelGuide />,
       },
       {
         path: "*",
