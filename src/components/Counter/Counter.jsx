@@ -1,54 +1,47 @@
 import { faAdd, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { forwardRef, useEffect, useMemo, useState } from "react";
+import React, { memo, forwardRef, useEffect, useMemo, useState } from "react";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
-export const Counter = forwardRef((props, ref) => {
-  const [counter, updateCounter] = useState("");
-  const { min, max } = props;
+export const Counter = memo(
+  forwardRef((props, ref) => {
+    const { min, max } = props;
 
-  const isAtMax = useMemo(() => {
-    return counter === max;
-  }, [max, counter]);
+    const isAtMax = useMemo(() => {
+      return props?.value === max;
+    }, [max, props?.value]);
 
-  const isAtMin = useMemo(() => {
-    return counter === min;
-  }, [min, counter]);
+    const isAtMin = useMemo(() => {
+      return props?.value === min;
+    }, [min, props?.value]);
 
-  const increment = () => {
-    if (isAtMax) return;
-    updateCounter(counter + 1);
-  };
-  const decrement = () => {
-    if (isAtMin) return;
-    updateCounter(counter - 1);
-  };
+    const increment = () => {
+      if (isAtMax) return;
+      props?.onCountChange(props?.value + 1);
+    };
+    const decrement = () => {
+      if (isAtMin) return;
+      props?.onCountChange(props?.value - 1);
+    };
 
-  useEffect(() => {
-    updateCounter(props?.value);
-  }, [props?.value]);
-
-  useEffect(() => {
-    props?.onCountChange(counter);
-  }, [props, counter]);
-
-  return (
-    <div className="sw-counter flex-row center-items">
-      <Button onClick={decrement} disabled={isAtMin}>
-        <FontAwesomeIcon icon={faMinus} />
-      </Button>
-      <Input
-        ref={ref}
-        type="number"
-        value={counter}
-        onChange={(e) => updateCounter(e.target.value)}
-        style={{ textAlign: "center", width: "50px" }}
-        min={min}
-        max={max}
-      />
-      <Button onClick={increment} disabled={isAtMax}>
-        <FontAwesomeIcon icon={faAdd} />
-      </Button>
-    </div>
-  );
-});
+    return (
+      <div className="sw-counter flex-row center-items">
+        <Button onClick={decrement} disabled={isAtMin}>
+          <FontAwesomeIcon icon={faMinus} />
+        </Button>
+        <Input
+          ref={ref}
+          type="number"
+          value={props.value}
+          onChange={(e) => updateCounter(e.target.value)}
+          style={{ textAlign: "center", width: "50px" }}
+          min={min}
+          max={max}
+        />
+        <Button onClick={increment} disabled={isAtMax}>
+          <FontAwesomeIcon icon={faAdd} />
+        </Button>
+      </div>
+    );
+  })
+);

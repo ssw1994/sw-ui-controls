@@ -8,7 +8,7 @@ import {
   faCircleDot,
 } from "@fortawesome/free-solid-svg-icons";
 import CaraouselStyle from "./Caraousel.module.css";
-export const Caraousel = forwardRef((props, ref) => {
+export const Caraousel = (props) => {
   const updatedProps = useCaraousel(props);
   const {
     slides,
@@ -19,6 +19,7 @@ export const Caraousel = forwardRef((props, ref) => {
     isLastSlide,
     gotoSlide,
   } = updatedProps;
+  console.log(slides, activeSlide);
   return (
     <div className={`${CaraouselStyle.sw_caraousel} flex-row center-items`}>
       <Button onClick={prevSlide} disabled={isFirstSlide}>
@@ -56,4 +57,4 @@ export const Caraousel = forwardRef((props, ref) => {
       </Button>
     </div>
   );
-});
+};

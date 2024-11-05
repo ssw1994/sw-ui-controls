@@ -18,6 +18,7 @@ import RegisterFormGuide from "./Pages/RegisterFormGuide/RegisterForm.guide";
 import CounterGuide from "./Pages/CounterGuide/CounterGuide";
 import StarRatingGuide from "./Pages/StarRatingGuide/StarRatingGuide";
 import ExpansionPanelGuide from "./Pages/ExpansionPanelGuide/ExpansionPanelGuide";
+import { ErrorBoundryPage } from "./Pages/ErrorBoundry";
 const router = createHashRouter([
   {
     path: "/",

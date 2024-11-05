@@ -10,7 +10,7 @@ export default function CounterGuide() {
   };
 
   useEffect(() => {
-    console.log("Counter changed ---->", counter);
+    console.log("Updated Counter ---->", counter);
   }, [counter]);
 
   return (

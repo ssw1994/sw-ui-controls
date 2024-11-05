@@ -25,7 +25,7 @@ export default function useCaraousel(props) {
       )
     );
     return s;
-  }, [props, activeSlide]);
+  }, []);
 
   const nextSlide = () => {
     if (activeSlide.slideNumber === slides.length - 1) return;
