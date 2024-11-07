@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import SideBar from "../SideBar/SideBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
-
+import HeaderStyle from "./Header.module.css";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,27 +21,27 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <div className="sw-header-bar">
-      {!isOpen && (
-        <button className="menu_button_open" onClick={toggleOpen}>
-          <FontAwesomeIcon icon={faBars} />
-        </button>
+    <div className={HeaderStyle.sw_header_bar}>
+      {isOpen && (
+        <div
+          className={`sidebar ${isOpen ? "open" : "closed"}`}
+          style={{
+            width: 200,
+            height: "100vh",
+            transition: "width 0.5s ease-in-out",
+            display: isOpen ? "block" : "none",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <SideBar />
+        </div>
       )}
-      <div
-        className={`sidebar ${isOpen ? "open" : "closed"}`}
-        style={{
-          width: 200,
-          height: "100vh",
-          transition: "width 0.5s ease-in-out",
-          display: isOpen ? "block" : "none",
-        }}
-      >
-        <SideBar />
-        {isOpen && (
-          <button className="menu_button_close" onClick={toggleOpen}>
-            <FontAwesomeIcon icon={faClose} />
-          </button>
-        )}
+      <button className={HeaderStyle.sw_menu_button} onClick={toggleOpen}>
+        <FontAwesomeIcon icon={isOpen ? faClose : faBars} />
+      </button>
+      <div>
+        <h3>SW UI CONTROLS</h3>
       </div>
     </div>
   );

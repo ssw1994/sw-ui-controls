@@ -19,12 +19,12 @@
 }
 .sw_card_media {
   height: 60%;
-  width: 100%;
+  width: 99%;
 }
 .sw_card_media img {
   height: 100%;
   width: 100%;
 }
-.sw_card > :not(.sw_card-media) {
+.sw_card > :not(.sw_card_media) {
   padding: 0 5px;
 }

@@ -1,0 +1,52 @@
+.sw_fullscreen_loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background: lightgrey;
+  opacity: 0.5;
+}
+
+.sw_relative_loader {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.spinner_icon {
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+  font-weight: bolder;
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+}
+.sw_relative_loader .spinner_icon {
+  position: absolute;
+}
+.sw_fullscreen_loader .spinner_icon {
+  position: fixed;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

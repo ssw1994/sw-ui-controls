@@ -1,55 +1,55 @@
 /* Main Theme*/
 :root {
   --primary-color: #3498db;
- /* A calming blue */
+  /* A calming blue */
   --secondary-color: #f1c40f;
- /* A vibrant orange */
+  /* A vibrant orange */
   --background-color: #f9f9f9;
- /* A light gray background */
+  /* A light gray background */
   --text-color: #333;
- /* A dark gray text color */
+  /* A dark gray text color */
   --accent-color: #2ecc71;
- /* A bright green accent color */
+  /* A bright green accent color */
   --error-color: #e74c3c;
- /* A bright red error color */
+  /* A bright red error color */
   --success-color: #2ecc71;
- /* A bright green success color */
+  /* A bright green success color */
   --warning-color: #f1c40f;
- /* A vibrant orange warning color */
- /* Dark Theme */
+  /* A vibrant orange warning color */
+  /* Dark Theme */
   --primary-color-dark: #2e6da4;
- /* A darker shade of the primary color */
+  /* A darker shade of the primary color */
   --secondary-color-dark: #e67e73;
- /* A darker shade of the secondary color */
+  /* A darker shade of the secondary color */
   --background-color-dark: #333;
- /* A dark gray background */
+  /* A dark gray background */
   --text-color-dark: #000;
- /* A black text color */
+  /* A black text color */
   --accent-color-dark: #27ae60;
- /* A darker shade of the accent color */
+  /* A darker shade of the accent color */
   --error-color-dark: #c0392b;
- /* A darker shade of the error color */
+  /* A darker shade of the error color */
   --success-color-dark: #27ae60;
- /* A darker shade of the success color */
+  /* A darker shade of the success color */
   --warning-color-dark: #e67e73;
- /* A darker shade of the warning color */
- /* Light Theme */
+  /* A darker shade of the warning color */
+  /* Light Theme */
   --primary-color-light: #87ceeb;
- /* A lighter shade of the primary color */
+  /* A lighter shade of the primary color */
   --secondary-color-light: #ffd700;
- /* A lighter shade of the secondary color */
+  /* A lighter shade of the secondary color */
   --background-color-light: #fff;
- /* A white background */
+  /* A white background */
   --text-color-light: #666;
- /* A light gray text color */
+  /* A light gray text color */
   --accent-color-light: #34c759;
- /* A lighter shade of the accent color */
+  /* A lighter shade of the accent color */
   --error-color-light: #f1a9a9;
- /* A lighter shade of the error color */
+  /* A lighter shade of the error color */
   --success-color-light: #34c759;
- /* A lighter shade of the success color */
+  /* A lighter shade of the success color */
   --warning-color-light: #ffd700;
- /* A lighter shade of the warning color */
+  /* A lighter shade of the warning color */
 }
 * * {
   background-color: var(--background-color);
@@ -61,7 +61,8 @@
 * .error * {
   color: var(--error-color);
 }
-* input[type="checkbox"], * input[type="radio"] {
+* input[type="checkbox"],
+* input[type="radio"] {
   accent-color: var(--accent-color);
 }
 * button.active {
@@ -76,6 +77,9 @@ body {
   font-weight: bold;
   margin: 0;
 }
+.sw-side-bar {
+  background-color: var(--background-color-light);
+}
 .sw-side-bar ul {
   text-decoration: none;
   list-style: none;
@@ -87,7 +91,9 @@ body {
 .sw-side-bar ul li:hover {
   cursor: pointer;
 }
-.flex, .flex-row, .flex-colum {
+.flex,
+.flex-row,
+.flex-colum {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -115,7 +121,7 @@ body {
   width: 100%;
 }
 pre {
-  height: min(500px,100vh);
+  height: min(500px, 100vh);
   overflow: auto;
 }
 select {

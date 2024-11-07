@@ -19,6 +19,7 @@ import CounterGuide from "./Pages/CounterGuide/CounterGuide";
 import StarRatingGuide from "./Pages/StarRatingGuide/StarRatingGuide";
 import ExpansionPanelGuide from "./Pages/ExpansionPanelGuide/ExpansionPanelGuide";
 import { ErrorBoundryPage } from "./Pages/ErrorBoundry";
+import LoadingSpinnerGuide from "./Pages/LoadingSpinnerGuide/LoadingSpinnerGuide";
 const router = createHashRouter([
   {
     path: "/",
@@ -87,6 +88,10 @@ const router = createHashRouter([
       {
         path: "ExpansionPanel",
         element: <ExpansionPanelGuide />,
+      },
+      {
+        path: "LoadingSpinner",
+        element: <LoadingSpinnerGuide />,
       },
       {
         path: "*",

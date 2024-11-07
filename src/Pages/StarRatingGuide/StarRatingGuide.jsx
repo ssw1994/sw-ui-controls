@@ -31,7 +31,7 @@ export default function StarRatingGuide() {
                     setRating={setRating}
                     rating={currentRating}
                     min={1}
-                    max={5}
+                    max={10}
                 />
                 `}
             </code>

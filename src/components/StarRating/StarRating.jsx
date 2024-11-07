@@ -1,6 +1,6 @@
 import { faStar, faStarAndCrescent } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import RatingStyle from "./StarRating.module.css";
 export const StarRating = (props) => {
   const { setRating, rating, min, max } = props;
@@ -21,7 +21,7 @@ export const StarRating = (props) => {
     <div className={RatingStyle.sw_star_rating}>
       {numberOfStars.map((star, index) => {
         return (
-          <>
+          <React.Fragment key={"" + star}>
             <FontAwesomeIcon
               icon={faStar}
               onClick={() => updateRating(star)}
@@ -29,7 +29,7 @@ export const StarRating = (props) => {
               title={"" + star}
             />
             &nbsp;
-          </>
+          </React.Fragment>
         );
       })}
     </div>

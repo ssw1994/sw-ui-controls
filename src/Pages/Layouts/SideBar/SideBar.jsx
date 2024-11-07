@@ -85,13 +85,21 @@ const CONTROLS = [
     id: "sw_rating",
     url: "StarRating",
   },
+  {
+    id: "sw_loading_spinner",
+    url: "LoadingSpinner",
+  },
+  {
+    id: "sw_chips",
+    url: "Chips",
+  },
 ];
 
 export default function SideBar() {
   const navigate = useNavigate();
   return (
-    <div className="sw-side-bar">
-      <ul style={{ position: "absolute", top: "100px" }}>
+    <div className="sw-side-bar" style={{ height: "0px" }}>
+      <ul>
         {CONTROLS.map((control) => {
           return (
             <li key={control?.id} onClick={() => navigate(control.url)}>
