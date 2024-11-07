@@ -16,3 +16,5 @@ export { Caraousel } from "./Caraousel/Caraousel";
 export { LoginForm } from "./LoginForm/LoginForm";
 export { RegistraionForm } from "./RegistrationForm/RegistraionForm";
 export { Counter } from "./Counter/Counter";
+export { StarRating } from "./StarRating/StarRating";
+export { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
