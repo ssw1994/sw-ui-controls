@@ -93,6 +93,14 @@ const CONTROLS = [
     id: "sw_chips",
     url: "Chips",
   },
+  {
+    id: "sw_tree",
+    url: "Tree",
+  },
+  {
+    id: "sw_toaster",
+    url: "Toaster",
+  },
 ];
 
 export default function SideBar() {

@@ -1,8 +1,18 @@
-import React, { forwardRef, useContext, useEffect, useState } from "react";
+import React, {
+  createRef,
+  forwardRef,
+  useContext,
+  useEffect,
+  useId,
+  useState,
+} from "react";
 import { Input } from "../Input/Input";
 import { FormContext } from "./FormGroup";
 
 export const FormControl = forwardRef((props, ref) => {
+  if (!ref) {
+    ref = createRef();
+  }
   const { updateForm } = useContext(FormContext);
   const { type } = props;
   const inputTypes = [
@@ -20,7 +30,6 @@ export const FormControl = forwardRef((props, ref) => {
   useEffect(() => {
     updateForm(props, value);
   }, [props, value]);
-
   if (inputTypes.includes(type)) {
     return (
       <Input
