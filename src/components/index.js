@@ -2,7 +2,7 @@ export { Button } from "./Button/Button";
 export { Card, CardBody, CardFooter, CardHeader, CardMedia } from "./Card";
 
 export { CheckBox } from "./CheckBox/CheckBox";
-export { default as FormGroup } from "./Forms/FormGroup";
+export { default as FormGroup, FormButton } from "./Forms/FormGroup";
 export { FormControl } from "./Forms/FormControl";
 export { Input } from "./Input/Input";
 export { RadioButton } from "./RadioButton/RadioButton";
@@ -18,3 +18,4 @@ export { RegistraionForm } from "./RegistrationForm/RegistraionForm";
 export { Counter } from "./Counter/Counter";
 export { StarRating } from "./StarRating/StarRating";
 export { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
+export { ExpansionPanel, Body, Header } from "./ExpansionPanel/ExpansionPanel";
