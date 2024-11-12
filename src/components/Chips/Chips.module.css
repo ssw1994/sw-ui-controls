@@ -1,0 +1,27 @@
+.sw_chips_container {
+  width: 100%;
+}
+
+.sw_chips_container .sw_chips_input_container {
+}
+
+.sw_chips_container .sw_chips {
+}
+
+.sw_chips_container .sw_chips .sw_chip {
+  gap: 0px;
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  justify-content: center;
+  padding-left: 5px;
+}
+.sw_chips_container .sw_chips .sw_chip > span {
+}
+.sw_chips_container .sw_chips .sw_chip button {
+}
+
+.sw_chips_container .sw_chips .sw_non_removable_chip {
+  border: 1px solid currentColor;
+  padding: 5px;
+}

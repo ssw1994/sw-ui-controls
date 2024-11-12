@@ -20,6 +20,7 @@ import StarRatingGuide from "./Pages/StarRatingGuide/StarRatingGuide";
 import ExpansionPanelGuide from "./Pages/ExpansionPanelGuide/ExpansionPanelGuide";
 import { ErrorBoundryPage } from "./Pages/ErrorBoundry";
 import LoadingSpinnerGuide from "./Pages/LoadingSpinnerGuide/LoadingSpinnerGuide";
+import ChipsGuide from "./Pages/ChipsGuide/ChipsGuide";
 const router = createHashRouter([
   {
     path: "/",
@@ -92,6 +93,10 @@ const router = createHashRouter([
       {
         path: "LoadingSpinner",
         element: <LoadingSpinnerGuide />,
+      },
+      {
+        path: "Chips",
+        element: <ChipsGuide />,
       },
       {
         path: "*",
