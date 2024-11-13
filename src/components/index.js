@@ -19,3 +19,4 @@ export { Counter } from "./Counter/Counter";
 export { StarRating } from "./StarRating/StarRating";
 export { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
 export { ExpansionPanel, Body, Header } from "./ExpansionPanel/ExpansionPanel";
+export { Chip, Chips } from "./Chips/Chips";

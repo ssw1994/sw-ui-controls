@@ -25,6 +25,8 @@ export default function useChips(props) {
 
   const addChip = (e) => {
     if (e.key === "Enter") {
+      e?.preventDefault();
+      e?.stopPropation();
       if (chips.find((item) => item.name === chipName)) return;
       const chip = new IChip(chipName, removable);
       updateChips((c) => [...c, chip]);
