@@ -31,7 +31,8 @@ export const Chip = (chip) => {
 };
 export const Chips = memo((props) => {
   const updatedProps = useChips(props);
-  const { chips, addChip, chipName, updateChipName, style } = updatedProps;
+  const { chips, addChip, chipName, updateChipName, style, label } =
+    updatedProps;
 
   return (
     <ChipContext.Provider value={updatedProps}>
@@ -42,7 +43,7 @@ export const Chips = memo((props) => {
             minLength={3}
             maxLength={50}
             onKeyDown={addChip}
-            label="Chip name"
+            label={label}
             placeholder="e.g React"
             value={chipName}
             onChange={(e) => updateChipName(e.target.value)}

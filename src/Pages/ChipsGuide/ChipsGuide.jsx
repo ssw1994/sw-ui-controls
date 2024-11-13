@@ -42,6 +42,7 @@ export default function ChipsGuide() {
             removable={true}
             render={renderChip}
             style={{ width: "400px" }}
+            label="Skill Name"
           />
         </Tab>
         <Tab header="Code">
@@ -72,14 +73,15 @@ export default function ChipsGuide() {
                     </div>
                     );
                 };
-                <Chips
+                 <Chips
                     onRemoveChip={chipRemoved}
                     getChips={getChips}
                     onChipAddition={onChipAdd}
                     removable={true}
                     render={renderChip}
                     style={{ width: "400px" }}
-                />
+                    label="Skill Name"
+                  />
             `}
             </code>
           </pre>
