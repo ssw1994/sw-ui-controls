@@ -23,6 +23,8 @@ export const FormControl = forwardRef((props, ref) => {
     "checkbox",
     "password",
     "date",
+    "year",
+    "month",
   ];
 
   const [value, updateValue] = useState("");

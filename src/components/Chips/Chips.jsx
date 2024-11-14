@@ -39,7 +39,6 @@ export const Chips = memo((props) => {
       <div className={ChipsStyle.sw_chips_container} style={style}>
         <div className={ChipsStyle.sw_chips_input_container}>
           <Input
-            required
             minLength={3}
             maxLength={50}
             onKeyDown={addChip}
