@@ -18,23 +18,25 @@ export const Caraousel = (props) => {
     isFirstSlide,
     isLastSlide,
     gotoSlide,
+    slideRange,
+    min,
   } = updatedProps;
   console.log(slides, activeSlide);
   return (
     <div className={`${CaraouselStyle.sw_caraousel} flex-row center-items`}>
-      <Button onClick={prevSlide} disabled={isFirstSlide}>
+      <Button onClick={prevSlide} disabled={isFirstSlide && !min}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Button>
-      {slides.map((slide) => {
-        return (
-          <div
-            className={CaraouselStyle.sw_slide}
-            hidden={slide.slideNumber !== activeSlide?.slideNumber}
-            key={slide.slideNumber}
-          >
-            {slide.contents}
-          </div>
-        );
+      {slideRange.map((sn) => {
+        return slides.map((slide, index) => {
+          return (
+            slide.slideNumber === sn && (
+              <div className={CaraouselStyle.sw_slide} key={slide.slideNumber}>
+                {slide.contents}
+              </div>
+            )
+          );
+        });
       })}
       <div className={CaraouselStyle.sw_caraousel_item}>
         {slides.map((slide) => {
@@ -52,7 +54,7 @@ export const Caraousel = (props) => {
           );
         })}
       </div>
-      <Button onClick={nextSlide} disabled={isLastSlide}>
+      <Button onClick={nextSlide} disabled={isLastSlide && !min}>
         <FontAwesomeIcon icon={faChevronRight} />
       </Button>
     </div>

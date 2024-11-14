@@ -1,0 +1,37 @@
+.error,
+.sw_select:has(p.error) * {
+  color: var(--error-color-dark);
+}
+.error *,
+.sw_select:has(p.error) * * {
+  color: var(--error-color-dark);
+}
+.sw_select {
+  margin: 10px 0;
+}
+.sw_select select {
+  border: 0px;
+  border-bottom: 1px solid;
+  border-color: inherit;
+  outline: none;
+}
+.sw_select select {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0px;
+}
+.sw_select label {
+  font-weight: 100;
+}
+.sw_select .focused label {
+  position: absolute;
+  top: 0;
+}
+.sw_select .blurred label {
+  position: absolute;
+  top: 30px;
+}
+
+.sw_select select option {
+  border-radius: 0;
+}

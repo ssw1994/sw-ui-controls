@@ -101,6 +101,14 @@ const CONTROLS = [
     id: "sw_toaster",
     url: "Toaster",
   },
+  {
+    id: "sw_html_editor",
+    url: "HtmlEditor",
+  },
+  {
+    id: "sw_modal",
+    url: "Modal",
+  },
 ];
 
 export default function SideBar() {

@@ -10,6 +10,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../Button/Button";
+import { Select } from "../Select/Select";
 export const CalenderContext = createContext();
 
 const Day = ({ date }) => {
@@ -78,7 +79,7 @@ const CalenderControls = () => {
         <FontAwesomeIcon icon={faChevronLeft} />
       </Button>
       <div className={CalenderStyle.sw_calender_controls_control}>
-        <select
+        <Select
           placeholder="Month"
           value={month}
           onChange={(e) => gotoMonth(e.target.value)}
@@ -90,10 +91,10 @@ const CalenderControls = () => {
               </option>
             );
           })}
-        </select>
+        </Select>
       </div>
       <div className={CalenderStyle.sw_calender_controls_control}>
-        <select
+        <Select
           placeholder="Year"
           value={year}
           onChange={(e) => gotoYear(e.target.value)}
@@ -105,7 +106,7 @@ const CalenderControls = () => {
               </option>
             );
           })}
-        </select>
+        </Select>
       </div>
       <Button onClick={nextMonth}>
         <FontAwesomeIcon icon={faChevronRight} />

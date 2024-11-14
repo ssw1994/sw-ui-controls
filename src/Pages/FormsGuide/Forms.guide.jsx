@@ -41,6 +41,18 @@ export default function FormsGuide() {
               required={true}
               name="rePassword"
             ></FormControl>
+            <FormControl
+              type="select"
+              label="User type"
+              items={[
+                { type: "admin", id: 1 },
+                { type: "guest", id: 2 },
+                { type: "retail", id: 3 },
+              ]}
+              required={true}
+              config={{ displayName: "type", value: "id" }}
+              name="userType"
+            ></FormControl>
             <FormButton>Submit</FormButton>
           </FormGroup>
         </Tab>
@@ -79,6 +91,18 @@ export default function FormsGuide() {
                   minLength={8}
                   required={true}
                   name="rePassword"
+                ></FormControl>
+                <FormControl
+                  type="select"
+                  label="User type"
+                  items={[
+                    { type: "admin", id: 1 },
+                    { type: "guest", id: 2 },
+                    { type: "retail", id: 3 },
+                  ]}
+                  required={true}
+                  config={{ displayName: "type", value: "id" }}
+                  name="userType"
                 ></FormControl>
                 <FormButton>Submit</FormButton>
               </FormGroup>`}

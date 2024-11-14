@@ -5,6 +5,7 @@ import { Tab, Tabs } from "../../components/Tabs";
 
 export default function InputGuide() {
   const [name, setName] = useState();
+  const [description, setDescription] = useState();
   const ref = createRef();
   useEffect(() => {
     ref?.current?.focus();
@@ -34,6 +35,16 @@ export default function InputGuide() {
               minLength={5}
               maxLength={10}
               type="text"
+            />
+            <Input
+              value={description}
+              label="Description"
+              onChange={(e) => setDescription(e.target.value)}
+              pattern="[a-z]+"
+              required
+              rows={5}
+              cols={25}
+              type="textarea"
             />
             <Button type="submit">Submit</Button>
           </form>

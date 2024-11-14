@@ -8,8 +8,10 @@ import React, {
 } from "react";
 import { Input } from "../Input/Input";
 import { FormContext } from "./FormGroup";
+import { Select } from "../Select/Select";
 
 export const FormControl = forwardRef((props, ref) => {
+  const [value, updateValue] = useState("");
   if (!ref) {
     ref = createRef();
   }
@@ -27,11 +29,21 @@ export const FormControl = forwardRef((props, ref) => {
     "month",
   ];
 
-  const [value, updateValue] = useState("");
-
   useEffect(() => {
     updateForm(props, value);
   }, [props, value]);
+
+  if (type === "select") {
+    return (
+      <Select
+        {...props}
+        ref={ref}
+        value={value}
+        onChange={(e) => updateValue(e.target.value)}
+      />
+    );
+  }
+
   if (inputTypes.includes(type)) {
     return (
       <Input

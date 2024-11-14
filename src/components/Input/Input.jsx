@@ -28,8 +28,14 @@ export const Input = forwardRef((props, ref) => {
       }`}
     >
       <label>{label}</label>
+
       <div style={{ position: "relative" }}>
-        {otherprops?.type !== "password" && <input {...otherprops} ref={ref} />}
+        {otherprops?.type !== "password" && otherprops.type !== "textarea" && (
+          <input {...otherprops} ref={ref} />
+        )}
+        {otherprops?.type === "textarea" && (
+          <textarea {...otherprops} ref={ref} />
+        )}
         {otherprops?.type === "password" && (
           <input
             {...otherprops}

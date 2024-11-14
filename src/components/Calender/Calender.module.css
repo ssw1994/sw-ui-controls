@@ -3,8 +3,7 @@
 }
 .sw_calender_controls_control {
   position: relative;
-  top: -7px;
-  width: max-content;
+  width: min(80px, 100%);
 }
 .sw_calender_date,
 .sw_calender_day {

@@ -9,13 +9,16 @@
 .sw_input_control {
   margin: 10px 0;
 }
-.sw_input_control input {
-  width: 100%;
-  height: 30px;
+.sw_input_control input,
+.sw_input_control textarea {
   border: 0px;
   border-bottom: 1px solid;
   border-color: inherit;
   outline: none;
+}
+.sw_input_control input {
+  width: 100%;
+  height: 30px;
 }
 .sw_input_control label {
   font-weight: 100;
