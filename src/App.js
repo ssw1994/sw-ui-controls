@@ -22,6 +22,8 @@ import { ErrorBoundryPage } from "./Pages/ErrorBoundry";
 import LoadingSpinnerGuide from "./Pages/LoadingSpinnerGuide/LoadingSpinnerGuide";
 import ChipsGuide from "./Pages/ChipsGuide/ChipsGuide";
 import SelectGuide from "./Pages/SelectGuide/SelectGuide";
+import HtmlEditorGuide from "./Pages/HtmlEditorGuide/HtmlEditorGuide";
+import ModalGuide from "./Pages/ModalGuide/ModelGuide";
 const router = createHashRouter([
   {
     path: "/",
@@ -102,6 +104,14 @@ const router = createHashRouter([
       {
         path: "Select",
         element: <SelectGuide />,
+      },
+      {
+        path: "HtmlEditor",
+        element: <HtmlEditorGuide />,
+      },
+      {
+        path: "Modal",
+        element: <ModalGuide />,
       },
       {
         path: "*",

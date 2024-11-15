@@ -1,0 +1,39 @@
+.sw_html_editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.sw_html_editor .toolbar {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: space-between;
+}
+.sw_html_editor .toolbar > button {
+  flex: 1;
+}
+
+.sw_html_editor .window {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.sw_html_editor .window > div {
+  flex: 1;
+}
+
+.sw_html_editor .editor {
+  height: 100%;
+  border: 1px solid #ccc;
+  min-height: 200px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.sw_html_editor .preview {
+  height: --webkit-fill-available;
+  border: 0px 0.5px 1px 1px solid gray;
+  word-break: break-all;
+}

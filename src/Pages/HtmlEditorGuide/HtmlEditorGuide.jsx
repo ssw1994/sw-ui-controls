@@ -1,5 +1,38 @@
 import { forwardRef } from "react";
-import HtmlEditorStyle from "./HtmlEditor.module.css";
-export const HtmlEditor = forwardRef((props, ref) => {
-  return <div className={HtmlEditorStyle.sw_html_editor}></div>;
-});
+import "./HtmlEditorGuide.css";
+import { Tab, Tabs } from "../../components";
+import { HtmlEditor } from "../../components/HtmlEditor/HtmlEditor";
+export default function HtmlEditorGuide() {
+  const getHtmlContent = (contents) => {
+    console.log(contents);
+  };
+  return (
+    <div className="sw_html_editor_guide">
+      <h1>Html Editor Guide</h1>
+      <Tabs>
+        <Tab header="Results">
+          <HtmlEditor
+            style={{ width: "500px", height: "500px" }}
+            getContents={getHtmlContent}
+          />
+        </Tab>
+        <Tab header="Code">
+          <pre>
+            <code>
+              {`
+                const getHtmlContent = (contents) => {
+                  console.log(contents);
+                };
+
+                <HtmlEditor
+                  style={{ width: "500px", height: "500px" }}
+                  getContents={getHtmlContent}
+                />
+                `}
+            </code>
+          </pre>
+        </Tab>
+      </Tabs>
+    </div>
+  );
+}
