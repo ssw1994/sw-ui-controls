@@ -109,6 +109,10 @@ const CONTROLS = [
     id: "sw_modal",
     url: "Modal",
   },
+  {
+    id: "sw_file_uploader",
+    url: "FileUploader",
+  },
 ];
 
 export default function SideBar() {

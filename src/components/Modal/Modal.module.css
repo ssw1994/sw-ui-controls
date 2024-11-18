@@ -16,6 +16,7 @@
   right: -8px;
   background-color: transparent;
   padding: 0;
+  overflow: scroll;
 }
 .MODAL_STYLES > button > svg {
   width: 100%;

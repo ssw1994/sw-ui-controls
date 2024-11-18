@@ -21,3 +21,5 @@ export { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
 export { ExpansionPanel, Body, Header } from "./ExpansionPanel/ExpansionPanel";
 export { Chip, Chips } from "./Chips/Chips";
 export { Select } from "./Select/Select";
+export { HtmlEditor } from "./HtmlEditor/HtmlEditor";
+export { Modal } from "./Modal/Modal";

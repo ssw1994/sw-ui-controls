@@ -1,12 +1,15 @@
 .sw-contents {
   position: fixed;
   top: 100px;
+  bottom: 0;
+  overflow: auto;
+  padding: 0 25px;
 }
 .contents-with-menu-open {
   left: 200px;
-  /* width: calc(100% - 220px); */
+  width: calc(100% - 260px);
 }
 .contents-with-menu-close {
   left: 50;
-  /* width: calc(100% - 70px); */
+  width: calc(100% - 120px);
 }
