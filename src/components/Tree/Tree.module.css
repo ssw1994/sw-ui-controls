@@ -1,0 +1,10 @@
+.sw_tree {
+}
+.sw_tree > .sw_tree_node > div {
+  direction: rtl;
+}
+
+.sw_tree_node > .sw_tree_node {
+  position: relative;
+  left: 35px;
+}

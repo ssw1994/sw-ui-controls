@@ -67,6 +67,16 @@ export default function InputGuide() {
           type="password"
 
         />
+        <Input
+              value={description}
+              label="Description"
+              onChange={(e) => setDescription(e.target.value)}
+              pattern="[a-z]+"
+              required
+              rows={5}
+              cols={25}
+              type="textarea"
+            />
         <Button type="submit">Submit</Button>
       </form>`}
             </code>

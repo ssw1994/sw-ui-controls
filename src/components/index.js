@@ -23,3 +23,4 @@ export { Chip, Chips } from "./Chips/Chips";
 export { Select } from "./Select/Select";
 export { HtmlEditor } from "./HtmlEditor/HtmlEditor";
 export { Modal } from "./Modal/Modal";
+export { Tree } from "./Tree/Tree";

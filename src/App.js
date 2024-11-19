@@ -24,6 +24,7 @@ import ChipsGuide from "./Pages/ChipsGuide/ChipsGuide";
 import SelectGuide from "./Pages/SelectGuide/SelectGuide";
 import HtmlEditorGuide from "./Pages/HtmlEditorGuide/HtmlEditorGuide";
 import ModalGuide from "./Pages/ModalGuide/ModelGuide";
+import TreeGuide from "./Pages/TreeGuide/TreeGuide";
 const router = createHashRouter([
   {
     path: "/",
@@ -112,6 +113,10 @@ const router = createHashRouter([
       {
         path: "Modal",
         element: <ModalGuide />,
+      },
+      {
+        path: "Tree",
+        element: <TreeGuide />,
       },
       {
         path: "*",
