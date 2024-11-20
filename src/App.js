@@ -25,6 +25,7 @@ import SelectGuide from "./Pages/SelectGuide/SelectGuide";
 import HtmlEditorGuide from "./Pages/HtmlEditorGuide/HtmlEditorGuide";
 import ModalGuide from "./Pages/ModalGuide/ModelGuide";
 import TreeGuide from "./Pages/TreeGuide/TreeGuide";
+import DropdownGuide from "./Pages/DropDownGuide/Dropdown.guide";
 const router = createHashRouter([
   {
     path: "/",
@@ -117,6 +118,10 @@ const router = createHashRouter([
       {
         path: "Tree",
         element: <TreeGuide />,
+      },
+      {
+        path: "Dropdown",
+        element: <DropdownGuide />,
       },
       {
         path: "*",

@@ -24,3 +24,4 @@ export { Select } from "./Select/Select";
 export { HtmlEditor } from "./HtmlEditor/HtmlEditor";
 export { Modal } from "./Modal/Modal";
 export { Tree } from "./Tree/Tree";
+export { Dropdown } from "./Dropdown/Dropdown";

@@ -2,15 +2,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
   gap: 15px;
 }
 .sw_stepper .sw_step_header .step_line {
   height: 2px;
   position: relative;
-  top: 5px;
   background: black;
+  top: -10px;
   border: 0;
-  width: 50px;
+  width: max(calc(100% - 185px), 50px);
 }
 .sw_stepper .sw_step_header .step {
   display: flex;
@@ -28,6 +29,7 @@
 }
 .sw_stepper .sw_step_header .step_label {
   font-weight: normal;
+  width: max-content;
 }
 .sw_stepper .sw_step_header .completed .step_number {
   background-color: lightgreen;
@@ -36,8 +38,18 @@
   color: lightgreen;
 }
 .sw_stepper .sw_step_header .active .step_number {
-  background-color: blue;
+  background-color: var(--primary-color);
 }
 .sw_stepper .sw_step_header .active .step_label {
-  color: blue;
+  color: var(--primary-color);
+}
+
+.sw_stepper .before_active_step_line {
+  background-color: var(--primary-color) !important;
+  height: 2px !important;
+}
+.sw_stepper .after_active_step_line {
+  font-weight: bolder;
+  height: 2px !important;
+  background-color: var(--text-color-dark) !important;
 }

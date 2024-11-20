@@ -113,6 +113,10 @@ const CONTROLS = [
     id: "sw_file_uploader",
     url: "FileUploader",
   },
+  {
+    id: "sw_dropdown",
+    url: "Dropdown",
+  },
 ];
 
 export default function SideBar() {

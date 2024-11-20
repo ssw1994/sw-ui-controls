@@ -1,4 +1,6 @@
-.sw_tree {
+.sw_tree > .sw_tree_node {
+  width: fit-content;
+  position: relative;
 }
 .sw_tree > .sw_tree_node > div {
   direction: rtl;

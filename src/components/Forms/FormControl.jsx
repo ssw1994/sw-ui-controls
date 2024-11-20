@@ -9,6 +9,7 @@ import React, {
 import { Input } from "../Input/Input";
 import { FormContext } from "./FormGroup";
 import { Select } from "../Select/Select";
+import { HtmlEditor } from "../HtmlEditor/HtmlEditor";
 
 export const FormControl = forwardRef((props, ref) => {
   const [value, updateValue] = useState("");
@@ -27,6 +28,7 @@ export const FormControl = forwardRef((props, ref) => {
     "date",
     "year",
     "month",
+    "textarea",
   ];
 
   useEffect(() => {
@@ -42,6 +44,10 @@ export const FormControl = forwardRef((props, ref) => {
         onChange={(e) => updateValue(e.target.value)}
       />
     );
+  }
+
+  if (["editor", "html"].includes(type)) {
+    return <HtmlEditor getContents={updateValue} />;
   }
 
   if (inputTypes.includes(type)) {

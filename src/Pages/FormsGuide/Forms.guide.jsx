@@ -53,6 +53,12 @@ export default function FormsGuide() {
               config={{ displayName: "type", value: "id" }}
               name="userType"
             ></FormControl>
+            <FormControl
+              type="editor"
+              label="Responsibilities"
+              name="responsibilites"
+              required
+            />
             <FormButton>Submit</FormButton>
           </FormGroup>
         </Tab>

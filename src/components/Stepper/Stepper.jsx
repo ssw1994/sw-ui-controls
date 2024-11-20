@@ -42,7 +42,7 @@ export const NestStepButton = forwardRef((props, ref) => {
 });
 
 export const StepHeader = (props) => {
-  const { steps } = useContext(StepperContext);
+  const { steps, activeStep } = useContext(StepperContext);
 
   return (
     <div className={StepperStyle.sw_step_header}>
@@ -50,7 +50,17 @@ export const StepHeader = (props) => {
         <>
           <Step {...step} key={step.stepLabel} />
           {index !== steps.length - 1 && (
-            <hr className={StepperStyle.step_line} />
+            <hr
+              className={
+                StepperStyle.step_line +
+                " " +
+                `${
+                  activeStep.stepNumber > step.stepNumber
+                    ? StepperStyle.before_active_step_line
+                    : StepperStyle.after_active_step_line
+                }`
+              }
+            />
           )}
         </>
       ))}
