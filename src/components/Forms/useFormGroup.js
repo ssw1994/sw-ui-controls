@@ -53,9 +53,9 @@ export default function useFormGroup(props) {
     const { children } = props;
     const formState = {};
     React.Children.forEach(children, (child, index) => {
-      const { name } = child.props;
+      const { name, value } = child.props;
       if (name) {
-        formState[name] = updateControlValidation("", child.props);
+        formState[name] = updateControlValidation(value ?? "", child.props);
       }
     });
     updateForm({ ...formState });
