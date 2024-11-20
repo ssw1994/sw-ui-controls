@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FormControl } from "../../components/Forms/FormControl";
 import FormGroup, { FormButton } from "../../components/Forms/FormGroup";
 import { Tabs, Tab } from "../../components/Tabs";
@@ -6,6 +7,12 @@ export default function FormsGuide() {
   const formSubmit = (e) => {
     console.log(e);
   };
+
+  const [userForm, updateForm] = useState({
+    username: "sachin",
+    password: "password@1994",
+    responsibilities: "<h1>Response</h1>",
+  });
 
   const matchPassword = (values) => {
     const { password, rePassword } = values;
@@ -26,6 +33,7 @@ export default function FormsGuide() {
               minLength={4}
               required={true}
               name="username"
+              value={userForm.username}
             ></FormControl>
             <FormControl
               type="password"
@@ -33,6 +41,7 @@ export default function FormsGuide() {
               minLength={8}
               required={true}
               name="password"
+              value={userForm.password}
             ></FormControl>
             <FormControl
               type="password"
@@ -57,6 +66,7 @@ export default function FormsGuide() {
               type="editor"
               label="Responsibilities"
               name="responsibilites"
+              value={userForm.responsibilities}
               required
             />
             <FormButton>Submit</FormButton>

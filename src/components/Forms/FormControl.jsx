@@ -12,7 +12,7 @@ import { Select } from "../Select/Select";
 import { HtmlEditor } from "../HtmlEditor/HtmlEditor";
 
 export const FormControl = forwardRef((props, ref) => {
-  const [value, updateValue] = useState("");
+  const [value, updateValue] = useState(props.value);
   if (!ref) {
     ref = createRef();
   }
@@ -47,7 +47,7 @@ export const FormControl = forwardRef((props, ref) => {
   }
 
   if (["editor", "html"].includes(type)) {
-    return <HtmlEditor getContents={updateValue} />;
+    return <HtmlEditor getContents={updateValue} {...props} />;
   }
 
   if (inputTypes.includes(type)) {

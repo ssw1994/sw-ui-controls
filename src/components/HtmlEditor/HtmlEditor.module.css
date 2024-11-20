@@ -38,3 +38,7 @@
   border: 0px 0.5px 1px 1px solid gray;
   word-break: break-all;
 }
+
+.sw_html_editor_label {
+  margin-bottom: 5px;
+}
