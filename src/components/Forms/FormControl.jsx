@@ -33,6 +33,10 @@ export const FormControl = forwardRef((props, ref) => {
 
   useEffect(() => {
     updateForm(props, value);
+  }, []);
+
+  useEffect(() => {
+    updateForm(props, value);
   }, [props, value]);
 
   if (type === "select") {

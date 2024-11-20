@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FormControl } from "../../components/Forms/FormControl";
 import FormGroup, { FormButton } from "../../components/Forms/FormGroup";
 import { Tabs, Tab } from "../../components/Tabs";
+import moment from "moment";
 
 export default function FormsGuide() {
   const formSubmit = (e) => {
@@ -12,6 +13,8 @@ export default function FormsGuide() {
     username: "sachin",
     password: "password@1994",
     responsibilities: "<h1>Response</h1>",
+    fromDate: moment(new Date()).format("YYYY-MM-DD"),
+    toDate: moment(new Date()).format("YYYY-MM-DD"),
   });
 
   const matchPassword = (values) => {
@@ -42,6 +45,20 @@ export default function FormsGuide() {
               required={true}
               name="password"
               value={userForm.password}
+            ></FormControl>
+            <FormControl
+              type="date"
+              label="fromDate"
+              required
+              name="fromDate"
+              value={userForm.fromDate}
+            ></FormControl>
+            <FormControl
+              type="date"
+              label="To Date"
+              required
+              name="toDate"
+              value={userForm.toDate}
             ></FormControl>
             <FormControl
               type="password"
