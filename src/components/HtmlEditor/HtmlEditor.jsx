@@ -1,4 +1,10 @@
-import React, { createRef, forwardRef, useEffect, useState } from "react";
+import React, {
+  Fragment,
+  createRef,
+  forwardRef,
+  useEffect,
+  useState,
+} from "react";
 import HtmlEditorStyle from "./HtmlEditor.module.css";
 import { Button } from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,7 +52,7 @@ export const HtmlEditor = forwardRef((props, ref) => {
   };
 
   return (
-    <>
+    <Fragment>
       <label className={HtmlEditorStyle.sw_html_editor_label}>{label}</label>
       <div className={HtmlEditorStyle.sw_html_editor} {...otherProps}>
         <div className={HtmlEditorStyle.toolbar}>
@@ -110,6 +116,6 @@ export const HtmlEditor = forwardRef((props, ref) => {
         </div> */}
         </div>
       </div>
-    </>
+    </Fragment>
   );
 });
