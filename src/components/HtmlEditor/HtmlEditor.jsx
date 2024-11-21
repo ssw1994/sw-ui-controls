@@ -34,7 +34,7 @@ export const HtmlEditor = forwardRef((props, ref) => {
     }
   }, [value]);
 
-  const [content, setContent] = useState();
+  const [content, setContent] = useState(value);
 
   const handleInputChange = (e) => {
     setContent(e?.currentTarget?.innerHTML);

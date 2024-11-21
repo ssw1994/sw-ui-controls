@@ -10,6 +10,7 @@ import { Input } from "../Input/Input";
 import { FormContext } from "./FormGroup";
 import { Select } from "../Select/Select";
 import { HtmlEditor } from "../HtmlEditor/HtmlEditor";
+import { StarRating } from "../StarRating/StarRating";
 
 export const FormControl = forwardRef((props, ref) => {
   const [value, updateValue] = useState(props.value);
@@ -52,6 +53,10 @@ export const FormControl = forwardRef((props, ref) => {
 
   if (["editor", "html"].includes(type)) {
     return <HtmlEditor getContents={updateValue} {...props} />;
+  }
+
+  if (["rating", "rate"]) {
+    return <StarRating rating={value} setRating={updateValue} {...props} />;
   }
 
   if (inputTypes.includes(type)) {

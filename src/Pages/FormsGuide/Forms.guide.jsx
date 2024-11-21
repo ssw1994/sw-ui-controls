@@ -15,6 +15,8 @@ export default function FormsGuide() {
     responsibilities: "<h1>Response</h1>",
     fromDate: moment(new Date()).format("YYYY-MM-DD"),
     toDate: moment(new Date()).format("YYYY-MM-DD"),
+    rePassword: "password@1994",
+    rating: 3,
   });
 
   const matchPassword = (values) => {
@@ -66,6 +68,7 @@ export default function FormsGuide() {
               minLength={8}
               required={true}
               name="rePassword"
+              value={userForm.rePassword}
             ></FormControl>
             <FormControl
               type="select"
@@ -78,12 +81,21 @@ export default function FormsGuide() {
               required={true}
               config={{ displayName: "type", value: "id" }}
               name="userType"
+              value="2"
             ></FormControl>
             <FormControl
               type="editor"
               label="Responsibilities"
               name="responsibilites"
               value={userForm.responsibilities}
+              required
+            />
+            <FormControl
+              type="rating"
+              min={1}
+              max={5}
+              name="rating"
+              value={userForm.rating}
               required
             />
             <FormButton>Submit</FormButton>
@@ -137,6 +149,21 @@ export default function FormsGuide() {
                   config={{ displayName: "type", value: "id" }}
                   name="userType"
                 ></FormControl>
+                <FormControl
+              type="editor"
+              label="Responsibilities"
+              name="responsibilites"
+              value={userForm.responsibilities}
+              required
+            />
+            <FormControl
+              type="rating"
+              min={1}
+              max={5}
+              name="rating"
+              value={userForm.rating}
+              required
+            />
                 <FormButton>Submit</FormButton>
               </FormGroup>`}
             </code>

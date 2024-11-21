@@ -8,11 +8,7 @@ export function FormButton(buttonProps) {
 
   return (
     <div className="flex-row center-items">
-      <GlobalButton
-        {...buttonProps}
-        disabled={!valid}
-        onClick={() => onSubmit(formValue)}
-      />
+      <GlobalButton {...buttonProps} disabled={!valid} type="submit" />
     </div>
   );
 }
