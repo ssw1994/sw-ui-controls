@@ -55,7 +55,7 @@ export const FormControl = forwardRef((props, ref) => {
     return <HtmlEditor getContents={updateValue} {...props} />;
   }
 
-  if (["rating", "rate"]) {
+  if (["rating", "rate"].includes(type)) {
     return <StarRating rating={value} setRating={updateValue} {...props} />;
   }
 
