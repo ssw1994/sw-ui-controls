@@ -1,6 +1,6 @@
 import { faStar, faStarAndCrescent } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useMemo } from "react";
+import React, { Fragment, useMemo } from "react";
 import RatingStyle from "./StarRating.module.css";
 export const StarRating = (props) => {
   const { setRating, rating, min, max, label } = props;
