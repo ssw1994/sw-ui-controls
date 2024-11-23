@@ -42,10 +42,11 @@ export default function useFormGroup(props) {
     return isValid && !formError;
   }, [form, formError]);
 
-  const updateControlValidation = (value = "", props) => {
+  const updateControlValidation = (v = "", props) => {
+    const { value, ...otherProps } = props;
     return {
-      value: value,
-      errors: validator({ value, ...props }),
+      value: v,
+      errors: validator({ value: v, ...otherProps }),
     };
   };
 

@@ -1,10 +1,14 @@
-.sw_star_rating{
-    display:flex;
-    gap:'2px';
+.sw_star_rating {
+  display: flex;
+  gap: "2px";
 }
-.sw_star_rating > svg > path:hover{
-    fill: yellow;
+.sw_star_rating > svg > path:hover {
+  fill: yellow;
 }
-.sw_star_rating > .completed > path{
-    fill: yellow;
+.sw_star_rating > .completed > path {
+  fill: yellow;
+}
+
+label {
+  font-weight: 100;
 }

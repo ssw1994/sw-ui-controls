@@ -4,7 +4,14 @@ import FormGroup, { FormButton } from "../../components/Forms/FormGroup";
 import { Tabs, Tab } from "../../components/Tabs";
 import moment from "moment";
 
-export default function FormsGuide() {
+export default function FormsGuide(props) {
+  let { skill } = props;
+  if (!skill) {
+    skill = { name: "", category: "", rating: 1 };
+  }
+  const addSkill = (payload) => {
+    console.log(payload);
+  };
   const formSubmit = (e) => {
     console.log(e);
   };
@@ -31,74 +38,36 @@ export default function FormsGuide() {
 
       <Tabs>
         <Tab header="Result">
-          <FormGroup onSubmit={formSubmit} formvalidator={[matchPassword]}>
+          <FormGroup onSubmit={addSkill}>
             <FormControl
               type="text"
-              label="Username"
-              minLength={4}
-              required={true}
-              name="username"
-              value={userForm.username}
-            ></FormControl>
-            <FormControl
-              type="password"
-              label="Passowrd"
-              minLength={8}
-              required={true}
-              name="password"
-              value={userForm.password}
-            ></FormControl>
-            <FormControl
-              type="date"
-              label="fromDate"
-              required
-              name="fromDate"
-              value={userForm.fromDate}
-            ></FormControl>
-            <FormControl
-              type="date"
-              label="To Date"
-              required
-              name="toDate"
-              value={userForm.toDate}
-            ></FormControl>
-            <FormControl
-              type="password"
-              label="Re Enter Password"
-              minLength={8}
-              required={true}
-              name="rePassword"
-              value={userForm.rePassword}
-            ></FormControl>
-            <FormControl
-              type="select"
-              label="User type"
-              items={[
-                { type: "admin", id: 1 },
-                { type: "guest", id: 2 },
-                { type: "retail", id: 3 },
-              ]}
-              required={true}
-              config={{ displayName: "type", value: "id" }}
-              name="userType"
-              value="2"
-            ></FormControl>
-            <FormControl
-              type="editor"
-              label="Responsibilities"
-              name="responsibilites"
-              value={userForm.responsibilities}
+              name="category"
+              placeholder="e.g Backend"
+              label="Category"
+              value={skill.category}
               required
             />
+            <FormControl
+              type="text"
+              name="skill"
+              placeholder="e.g Java"
+              label="Skill Name"
+              value={skill.name}
+              required
+            />
+
             <FormControl
               type="rating"
+              name="rating"
+              value={skill.rating}
+              label="Rate yourself for this skill"
               min={1}
               max={5}
-              name="rating"
-              value={userForm.rating}
               required
             />
-            <FormButton>Submit</FormButton>
+            <FormButton style={{ marginTop: "10px", padding: "15px 25px" }}>
+              Save
+            </FormButton>
           </FormGroup>
         </Tab>
         <Tab header="Code">

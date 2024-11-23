@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useMemo } from "react";
 import RatingStyle from "./StarRating.module.css";
 export const StarRating = (props) => {
-  const { setRating, rating, min, max } = props;
+  const { setRating, rating, min, max, label } = props;
   const numberOfStars = useMemo(() => {
     const stars = [];
     for (let i = min; i <= max; i++) {
@@ -18,20 +18,28 @@ export const StarRating = (props) => {
     }
   };
   return (
-    <div className={RatingStyle.sw_star_rating}>
-      {numberOfStars.map((star, index) => {
-        return (
-          <React.Fragment key={"" + star}>
-            <FontAwesomeIcon
-              icon={faStar}
-              onClick={() => updateRating(star)}
-              className={star <= rating ? RatingStyle.completed : ""}
-              title={"" + star}
-            />
-            &nbsp;
-          </React.Fragment>
-        );
-      })}
-    </div>
+    <>
+      {label && (
+        <div style={{ marginBottom: "8px" }}>
+          <label>{label}</label>
+          <br />
+        </div>
+      )}
+      <div className={RatingStyle.sw_star_rating}>
+        {numberOfStars.map((star, index) => {
+          return (
+            <React.Fragment key={"" + star}>
+              <FontAwesomeIcon
+                icon={faStar}
+                onClick={() => updateRating(star)}
+                className={star <= rating ? RatingStyle.completed : ""}
+                title={"" + star}
+              />
+              &nbsp;
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </>
   );
 };

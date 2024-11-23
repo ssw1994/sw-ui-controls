@@ -17,8 +17,9 @@ export const FormControl = forwardRef((props, ref) => {
   if (!ref) {
     ref = createRef();
   }
+
   const { updateForm } = useContext(FormContext);
-  const { type } = props;
+  const { type, defaultValue } = props;
   const inputTypes = [
     "email",
     "text",
@@ -39,6 +40,12 @@ export const FormControl = forwardRef((props, ref) => {
   useEffect(() => {
     updateForm(props, value);
   }, [props, value]);
+
+  // useEffect(() => {
+  //   if (defaultValue) {
+  //     updateValue(defaultValue);
+  //   }
+  // }, [defaultValue]);
 
   if (type === "select") {
     return (
