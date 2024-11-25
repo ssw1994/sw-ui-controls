@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SpinnerStyle from "./LoadingSpinner.module.css";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { Fragment } from "react";
 export const LoadingSpinner = ({ isLoading, fullscreen, children }) => {
   if (isLoading && fullscreen) {
     return (
