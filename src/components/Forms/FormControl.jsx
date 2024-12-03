@@ -11,6 +11,7 @@ import { FormContext } from "./FormGroup";
 import { Select } from "../Select/Select";
 import { HtmlEditor } from "../HtmlEditor/HtmlEditor";
 import { StarRating } from "../StarRating/StarRating";
+import { FileUploader } from "../FileUploader/FileUploader";
 
 export const FormControl = forwardRef((props, ref) => {
   const [value, updateValue] = useState(props.value);
@@ -56,6 +57,10 @@ export const FormControl = forwardRef((props, ref) => {
         onChange={(e) => updateValue(e.target.value)}
       />
     );
+  }
+
+  if (type === "file") {
+    return <FileUploader {...props} uploadedFiles={(e) => updateValue(e)} />;
   }
 
   if (["editor", "html"].includes(type)) {

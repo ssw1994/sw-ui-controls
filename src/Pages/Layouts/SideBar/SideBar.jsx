@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router";
+import { act, useMemo } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 const CONTROLS = [
   {
@@ -121,12 +122,25 @@ const CONTROLS = [
 
 export default function SideBar() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const activeLocation = useMemo(() => {
+    return location.pathname.substring(1);
+  }, [location.pathname]);
+
+  console.log(activeLocation);
   return (
     <div className="sw-side-bar" style={{ height: "0px" }}>
       <ul>
         {CONTROLS.map((control) => {
           return (
-            <li key={control?.id} onClick={() => navigate(control.url)}>
+            <li
+              key={control?.id}
+              onClick={() => navigate(control.url)}
+              className={
+                activeLocation === control.url ? "active-link" : "inactive-link"
+              }
+            >
               {control.url}
             </li>
           );

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import SideBar from "../SideBar/SideBar";
 export default function HeadSideContentLayout() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -18,6 +19,10 @@ export default function HeadSideContentLayout() {
       !isOpen ? "contents-with-menu-open" : "contents-with-menu-close"
     );
   }, [isOpen]);
+
+  useEffect(() => {
+    navigate("/Input");
+  }, []);
 
   return (
     <>

@@ -25,7 +25,11 @@ export default function validator({
 
   const validate = () => {
     if (required) {
-      errors.required = !value ? true : false;
+      errors.required = !value
+        ? Array.isArray(value)
+          ? value.length > 0
+          : true
+        : false;
     }
     if (pattern && value) {
       const p = pattern.replace("/", "'");

@@ -13,7 +13,6 @@ import {
   FormButton,
 } from "../../components";
 import { Modal } from "../../components/Modal/Modal";
-import InputGuide from "../InputGuide/Input.guide";
 export default function ModalGuide() {
   const [open, setOpen] = useState(false);
   const onClose = () => {

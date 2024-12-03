@@ -65,6 +65,13 @@ export default function FormsGuide(props) {
               max={5}
               required
             />
+
+            <FormControl
+              name="profile_image"
+              required
+              label="Profile Image"
+              type="file"
+            />
             <FormButton style={{ marginTop: "10px", padding: "15px 25px" }}>
               Save
             </FormButton>
