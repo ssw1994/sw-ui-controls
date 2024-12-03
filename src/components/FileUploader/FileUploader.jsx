@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from "react";
+import React, { useEffect, useId, useMemo, useState, Fragment } from "react";
 import FileUploaderStyle from "./FileUploader.module.css";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
@@ -11,7 +11,6 @@ import {
   faTrash,
   faWindowClose,
 } from "@fortawesome/free-solid-svg-icons";
-import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const ImagePreview = ({ img }) => {
   const id = useId();
