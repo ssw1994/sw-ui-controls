@@ -21,7 +21,7 @@ export default function ChipsGuide() {
     return (
       <div
         className="chip_style flex-row space-around"
-        style={{ background: "lightgreen", padding: "5px" }}
+        style={{ background: "var(--background-color)", padding: "5px" }}
       >
         {chip.name}
         <Button onClick={() => removeChip(chip)}>

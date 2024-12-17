@@ -3,10 +3,10 @@
   gap: "2px";
 }
 .sw_star_rating > svg > path:hover {
-  fill: yellow;
+  fill: var(--text-color);
 }
 .sw_star_rating > .completed > path {
-  fill: yellow;
+  fill: var(--accent-color);
 }
 
 label {

@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   opacity: 0.5;
-  background: lightgrey;
+  background: var(--background-color);
   opacity: 0.5;
 }
 

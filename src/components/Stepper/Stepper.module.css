@@ -32,24 +32,24 @@
   width: max-content;
 }
 .sw_stepper .sw_step_header .completed .step_number {
-  background-color: lightgreen;
+  background-color: var(--success-color);
 }
 .sw_stepper .sw_step_header .completed .step_label {
-  color: lightgreen;
+  color: var(--success-color);
 }
 .sw_stepper .sw_step_header .active .step_number {
   background-color: var(--primary-color);
 }
 .sw_stepper .sw_step_header .active .step_label {
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .sw_stepper .before_active_step_line {
-  background-color: var(--primary-color) !important;
+  background-color: var(--success-color) !important;
   height: 2px !important;
 }
 .sw_stepper .after_active_step_line {
   font-weight: bolder;
   height: 2px !important;
-  background-color: var(--text-color-dark) !important;
+  background-color: var(--text-color) !important;
 }

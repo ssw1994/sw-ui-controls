@@ -51,10 +51,7 @@
   --warning-color-light: #ffd700;
   /* A lighter shade of the warning color */
 }
-* * {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
+
 * .error {
   color: var(--error-color);
 }
@@ -66,7 +63,8 @@
   accent-color: var(--accent-color);
 }
 * button.active {
-  background-color: var(--accent-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 body {
   padding: 0;
@@ -141,10 +139,6 @@ select {
   border: 1px solid currentColor;
 }
 
-.active-link {
-  background-color: var(--text-color);
-  color: var(--background-color);
-}
 .active-link {
   background-color: var(--text-color);
   color: var(--background-color);

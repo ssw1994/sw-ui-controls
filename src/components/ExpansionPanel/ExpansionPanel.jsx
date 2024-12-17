@@ -13,7 +13,11 @@ export const Header = (props) => {
     <CardHeader className={ExpansionPanelStyle.sw_expansion_panel_header}>
       <div>{children}</div>
       <div>
-        <Button onClick={() => setOpen(!open)} title={open ? "Close" : "Open"}>
+        <Button
+          onClick={() => setOpen(!open)}
+          title={open ? "Close" : "Open"}
+          style={{ float: "right" }}
+        >
           <FontAwesomeIcon icon={open ? faAngleUp : faAngleDown} />
         </Button>
       </div>
