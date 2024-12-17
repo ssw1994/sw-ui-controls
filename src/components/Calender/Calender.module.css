@@ -8,7 +8,7 @@
 .sw_calender_date,
 .sw_calender_day {
   width: min(calc(100% / 7) - 7px, 100%);
-  border: 1px solid lightgray;
+  border: 1px solid var(--text-color);
   height: 50px;
   gap: 0 !important;
 }
